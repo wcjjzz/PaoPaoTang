@@ -36,8 +36,20 @@ public class ImageSplitter {
                         default: direction = "unknown";
                     }
                     
-                    File output = new File(String.format("image/Characters/newCharacers/newCharacter_%s%d.png", direction, col+1));
+                 // 构建输出文件夹路径
+                    String folderPath = String.format("image/Characters/newCharacers_1");
+                    File folder = new File(folderPath);
+
+                    // 如果文件夹不存在，则自动创建
+                    if (!folder.exists()) {
+                        folder.mkdirs(); // 创建多级目录（如果有父目录也不存在）
+                    }
+
+                    // 构建输出文件路径
+                    String filePath = String.format("%s/newCharacter_%s%d.png", folderPath, direction, col + 1);
+                    File output = new File(filePath);
                     ImageIO.write(subImage, "png", output);
+
                 }
             }
             

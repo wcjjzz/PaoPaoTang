@@ -39,6 +39,26 @@ rect1=image/bg/rect1.png
 rect2=image/bg/rect2.png
 rect3=image/bg/rect3.png
 
+new1up1=image/Characters/newCharacers_1/newCharacter_up1.png
+new1up2=image/Characters/newCharacers_1/newCharacter_up2.png
+new1up3=image/Characters/newCharacers_1/newCharacter_up3.png
+new1up4=image/Characters/newCharacers_1/newCharacter_up4.png
+
+new1down1=image/Characters/newCharacers_1/newCharacter_down1.png
+new1down2=image/Characters/newCharacers_1/newCharacter_down2.png
+new1down3=image/Characters/newCharacers_1/newCharacter_down3.png
+new1down4=image/Characters/newCharacers_1/newCharacter_down4.png
+
+new1left1=image/Characters/newCharacers_1/newCharacter_left1.png
+new1left2=image/Characters/newCharacers_1/newCharacter_left2.png
+new1left3=image/Characters/newCharacers_1/newCharacter_left3.png
+new1left4=image/Characters/newCharacers_1/newCharacter_left4.png
+
+new1right1=image/Characters/newCharacers_1/newCharacter_right1.png
+new1right2=image/Characters/newCharacers_1/newCharacter_right2.png
+new1right3=image/Characters/newCharacers_1/newCharacter_right3.png
+new1right4=image/Characters/newCharacers_1/newCharacter_right4.png
+
 1up1=image/p1/r0_Up/1.png
 1up2=image/p1/r0_Up/2.png
 1up3=image/p1/r0_Up/3.png

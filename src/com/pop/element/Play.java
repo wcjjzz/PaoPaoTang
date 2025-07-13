@@ -17,6 +17,10 @@ import static java.lang.Thread.sleep;
 * 注意，发现传入的icon的宽不正确，为-1
 * */
 public class Play extends ElementObj {
+	
+	//换装速度控制变量
+	private int animationCounter = 0;
+	private final int ANIMATION_DELAY = 10; // 每3帧更新一次动画
 
 	boolean upBoolean = false;
 	boolean downBoolean = false;
@@ -158,7 +162,7 @@ public class Play extends ElementObj {
 				g.drawString(getScore()+"",80,55+120*(Integer.parseInt(playNumber)-1)+95);//分数
 //			}
 		}catch (Exception e){
-			System.out.println(playNumber+" "+fxString+" "+imageIndex);
+//			System.out.println(playNumber+" "+fxString+" "+imageIndex);
 		}
 	}
 
@@ -277,6 +281,11 @@ public class Play extends ElementObj {
 	//面对方向和imageindex一起组成了最终的icon图片显示
 	public void updateImage() {
 		String iconkey= playNumber;
+		
+		// 确保imageIndex在1-4范围内
+	    if (imageIndex < 1) imageIndex = 1;
+	    if (imageIndex > 4) imageIndex = 1;
+		
 		switch (fxString) {
 			case "up":
 				iconkey=iconkey+"up"+ imageIndex;
@@ -314,30 +323,20 @@ public class Play extends ElementObj {
 		int dy=(getY()+getH())/ MapManager.dxdy;//对于高度，直接加上玩家高度即可
 		if (this.leftBoolean) {
 			try {
-			if (MapManager.mapList[dy][dx-1]==null||!(MapManager.mapList[dy][dx] instanceof Bomb)){//如果要走的格子前面是炸弹就不走
-				this.setX(this.getX() - v);
-			}}catch (Exception e){
+				if (MapManager.mapList[dy][dx-1]==null||!(MapManager.mapList[dy][dx] instanceof Bomb)){//如果要走的格子前面是炸弹就不走
+					this.setX(this.getX() - v);
+				}
+			}catch (Exception e){
 				System.out.println("yuejueleft"+playNumber+getH()+"!!"+getW());
-			}
-			//注意到imageindex最大只有24个，因此达到24之后需要置为1
-			if(imageIndex <24){
-				imageIndex++;//小于24就自增
-			}else{//当等于或者大于24时进行置1
-				imageIndex =1;
 			}
 		}
 		if (this.upBoolean) {
 			try {
-			if (MapManager.mapList[dy-1][dx]==null||!(MapManager.mapList[dy][dx] instanceof Bomb)){//如果要走的格子前面是空并且没有炸弹就走
-				this.setY(this.getY() - v);
-			}
+				if (MapManager.mapList[dy-1][dx]==null||!(MapManager.mapList[dy][dx] instanceof Bomb)){//如果要走的格子前面是空并且没有炸弹就走
+					this.setY(this.getY() - v);
+				}
 			}catch (Exception e){
 				System.out.println("yuejueup"+playNumber+getH()+"!!"+getW());
-			}
-			if(imageIndex <24){
-				imageIndex++;//小于24就自增
-			}else{//当等于或者大于24时进行置1
-				imageIndex =1;
 			}
 		}
 		if (this.rightBoolean ) {//这里的边界直接使用常量获取
@@ -348,12 +347,6 @@ public class Play extends ElementObj {
 			}catch (Exception e){
 				System.out.println("yuejuerig"+playNumber+getH()+"!!"+getW());
 			}
-
-			if(imageIndex <24){
-				imageIndex++;//小于24就自增
-			}else{//当等于或者大于24时进行置1
-				imageIndex =1;
-			}
 		}
 		if (this.downBoolean) {
 			try {
@@ -362,15 +355,24 @@ public class Play extends ElementObj {
 				}
 			}catch (Exception e){
 				System.out.println("yuejuedown"+playNumber+" "+getH()+"!!"+getW());
-			}
-
-
-			if(imageIndex <24){
-				imageIndex++;//小于24就自增
-			}else{//当等于或者大于24时进行置1
-				imageIndex =1;
-			}
+			}	
 		}
+		
+		// 动画帧更新控制
+	    if (upBoolean || downBoolean || leftBoolean || rightBoolean) {
+	        animationCounter++;
+	        if (animationCounter >= ANIMATION_DELAY) {
+	            animationCounter = 0;
+	            imageIndex++;
+	            if (imageIndex > 4) {  // 新角色只有4帧动画
+	                imageIndex = 1;
+	            }
+	        }
+	    } else {
+	        // 静止时重置为第一帧
+	        imageIndex = 1;
+	        animationCounter = 0;
+	    }
 	}
 
 

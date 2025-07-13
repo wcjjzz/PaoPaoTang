@@ -69,14 +69,14 @@ public class GamemainThread extends Thread {
 //		图片导入
 //四个角标：40, 20   670, 530   40,530  670, 20
 		if (onePlay){
-			ImageIcon icon1 = GameLoad.imgMap.get("1down1");
-			Play obj1 = new Play(40, 20,"1", icon1);// 实例化玩家1
+			ImageIcon icon1 = GameLoad.imgMap.get("new1down1");
+			Play obj1 = new Play(40, 20,"new1", icon1);// 实例化玩家1
 			em.addElement(obj1, GameElement.PLAY);
 			loadEnemy(3);
 		}else{
-			ImageIcon icon1 = GameLoad.imgMap.get("1down1");
+			ImageIcon icon1 = GameLoad.imgMap.get("new1down1");
 			ImageIcon icon2 = GameLoad.imgMap.get("2down1");
-			Play obj1 = new Play(40, 20,"1", icon1);// 实例化玩家1
+			Play obj1 = new Play(40, 20,"new1", icon1);// 实例化玩家1
 			Play obj2 = new Play(670, 530,"2", icon2);// 实例化玩家2
 			// 直接添加
 			em.addElement(obj2, GameElement.PLAY);

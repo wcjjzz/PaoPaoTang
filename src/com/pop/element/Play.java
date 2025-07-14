@@ -170,7 +170,7 @@ public class Play extends ElementObj {
 	public void keyClick(boolean puss, int dis) {
 		//System.out.println(dis);
 		if (puss) {
-			if (this.playNumber.equals("new1")) {
+			if (this.playNumber.equals("1")) {
 				switch (dis) {
 				case 38:
 					this.downBoolean=false;this.upBoolean=true;
@@ -230,7 +230,7 @@ public class Play extends ElementObj {
 				}
 			}
 		} else {
-			if (this.playNumber.equals("new1")) {
+			if (this.playNumber.equals("1")) {
 				switch (dis) {
 				case 38:
 					this.upBoolean=false;

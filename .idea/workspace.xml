@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a94a4065-777d-4f9c-852d-9af4307b9acd" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaoPaoTang/com/pop/show/GameMainJPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaoPaoTang/com/pop/show/GameMainJPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pop/show/GameMainJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pop/show/GameMainJPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752423234549</updated>
-      <workItem from="1752423235670" duration="879000" />
+      <workItem from="1752423235670" duration="7294000" />
     </task>
     <servers />
   </component>

@@ -66,9 +66,20 @@ public class GameMainJPanel extends ShowObj{
 		GameJFrame.getGameJFrame().setSize(w,h);//更改面板大小
 		Map<GameElement, List<ElementObj>> all = em.getGameElements();
 
-		//此处以下是背景图片的设定，可以改变
-		ImageIcon icon = new ImageIcon("image/mapbackground/"+Level+".png");
-		g.drawImage(icon.getImage(), 195, 60,GameMainJPanel.w,GameMainJPanel.h,this);//此处进行缩放,注意获取的宽度和高度是游戏mianjpanel的而不是整个窗体
+        // 用floor.png平铺地图区域（45*45像素，与地图元素对齐）
+        ImageIcon floorIcon = new ImageIcon("image/mapbackground/floor.png");
+        Image floorImg = floorIcon.getImage();
+        int tileW = 45;
+        int tileH = 45;
+        int mapStartX = 195;
+        int mapStartY = 60;
+        int mapTilesX = 17; // 列数
+        int mapTilesY = 15; // 行数
+        for (int dy = 0; dy < mapTilesY; dy++) {
+            for (int dx = 0; dx < mapTilesX; dx++) {
+                g.drawImage(floorImg, mapStartX + dx * tileW, mapStartY + dy * tileH, tileW, tileH, this);
+            }
+        }
 
 		//注意，由于分开了玩家类和其他元素，因此需要在此两个都显示
 

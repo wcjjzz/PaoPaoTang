@@ -14,6 +14,9 @@ public class PropEffect extends ElementObj {
 	int types;
 	int propIndex =1;
 
+	//展示道具速度控制变量
+	private int aniCount = 0;
+	private final int ANI_DELAY = 20;
 	@Override
 	public void showElement(Graphics g) {//展示道具函数
 		try {
@@ -23,22 +26,27 @@ public class PropEffect extends ElementObj {
 		}
 	}
 	//prop内的move方法被改为动画方法，只作为动画操作
-	//道具的动画有51帧
+	//道具的动画有4帧
 	public void move() {
-
-		if(propIndex <51){
-			propIndex++;//小于51就自增
-		}else{//当等于或者大于51时进行置1
-			propIndex =1;
+		if(aniCount >= ANI_DELAY) {
+			aniCount = 0;
+			if(propIndex <4){
+				propIndex++;//小于4就自增
+			}else{//当等于或者大于4时进行置1
+				propIndex =1;
+			}
+		}else {
+			aniCount++;
 		}
+		
 		setIcon(GameLoad.imgMap.get(types+"prop"+ propIndex));
 
 	}
 	//此函数接收进来的是单位化xy
 	public ElementObj build(int x,int y,int types) { ;
 
-		setH(66);
-		setW(51);
+		setH(64);
+		setW(42);
 		setX(x);
 		setY(y);
 		sethHit(45);

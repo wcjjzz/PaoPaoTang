@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a94a4065-777d-4f9c-852d-9af4307b9acd" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/image/bg/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/bg/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/bg/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/bg/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaoPaoTang/com/pop/show/GameBeginJPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaoPaoTang/com/pop/show/GameBeginJPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaoPaoTang/com/pop/show/GameBeginJPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaoPaoTang/com/pop/show/GameBeginJPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pop/show/GameBeginJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pop/show/GameBeginJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pop/show/GameOverJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pop/show/GameOverJPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

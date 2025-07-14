@@ -49,29 +49,10 @@ public class GameOverJPanel extends ShowObj implements ActionListener {
 
     public void init(){
         this.setLayout(null);
-        ImageIcon bgIcon = new ImageIcon("image/button/DefineSprite_397_uiBg/393.png");//蓝色背景
+        ImageIcon bgIcon = new ImageIcon("image/bg/gameover.png");
         bgIcon.setImage(bgIcon.getImage().getScaledInstance(767,677, Image.SCALE_DEFAULT));
-
-        ImageIcon icon1 = new ImageIcon("image/bg/win.png");//win
-        ImageIcon icon2 = new ImageIcon("image/bg/lose.png");//lose
-
-        JLabel jLabel1 = new JLabel(icon1);//存放win
-        jLabel1.setBounds(78,170,596,211);//设置面板大小
-
-        JLabel jLabel2 = new JLabel(icon2);//存放lose
-        jLabel2.setBounds(110,170,596,211);//设置面板大小
-
-        JLabel jLabel3 = new JLabel(bgIcon);//存放蓝色背景
-        jLabel3.setBounds(0,0,767,677);//设置面板大小
-
-        apple.setImage(apple.getImage().getScaledInstance(1092,794,Image.SCALE_AREA_AVERAGING));
-        ap.setIcon(apple);//将可移动图片注入
-        ap.setBounds(apple_x,apple_y,1000,1000);//设置面板大小
-
-        /**
-         * 注入
-         */
-
+        JLabel jLabelBg = new JLabel(bgIcon);
+        jLabelBg.setBounds(0,0,767,677);
 
         JButton back = new JButton();//返回按钮
         back.setIcon(new ImageIcon("image/bg/rect4.png"));
@@ -79,7 +60,6 @@ public class GameOverJPanel extends ShowObj implements ActionListener {
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                onePlay=true;
                 GameOverJPanel.this.actionPerformed(e);
             }
         });
@@ -89,15 +69,8 @@ public class GameOverJPanel extends ShowObj implements ActionListener {
                 MapManager.mapList[dy][dx]=null;
             }
         }
-        if(GameMainJPanel.isLose()){//如果输了则显示lose
-            this.add(jLabel2);
-        }else{//通关则显示win
-            this.add(jLabel1);
-        }
         this.add(back);
-        this.add(ap);
-        this.add(jLabel3);
-
+        this.add(jLabelBg);
         this.setVisible(true);
         this.setOpaque(true);
     }

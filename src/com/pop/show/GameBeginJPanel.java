@@ -51,29 +51,14 @@ public class GameBeginJPanel extends ShowObj implements ActionListener{
     }
 
     private void init(){
-        //ui界面开始音乐
-      //  musicPlayer=new MusicPlayer("sound/uiMusic.wav",true);
-      //  musicPlayer.start();
-
         this.setLayout(null);
         GameJFrame.getGameJFrame().setSize(767,677);//设置面板大小
-        ImageIcon icon1 = new ImageIcon("image/bg/1522.png");//图案
-        ImageIcon icon2 = new ImageIcon("image/bg/1604.png");//标题
-        ImageIcon bgIcon = new ImageIcon("image/button/DefineSprite_397_uiBg/393.png");//蓝色背景
+        
+        // 只显示title.png，铺满整个面板
+        ImageIcon bgIcon = new ImageIcon("image/bg/title.png");
         bgIcon.setImage(bgIcon.getImage().getScaledInstance(767,677,Image.SCALE_DEFAULT));
-
-        JLabel jLabel1 = new JLabel(icon1);//存放图案
-        jLabel1.setBounds(50,270,403,292);//设置面板大小
-
-        JLabel jLabel2 = new JLabel(icon2);//存放标题
-        jLabel2.setBounds(100,30,405,194);//设置面板大小
-
-        JLabel jLabel3 = new JLabel(bgIcon);//存放蓝色背景
-        jLabel3.setBounds(0,0,767,677);//设置面板大小
-
-        apple.setImage(apple.getImage().getScaledInstance(1092,794,Image.SCALE_AREA_AVERAGING));
-        ap.setIcon(apple);//将可移动图片注入
-        ap.setBounds(apple_x,apple_y,1000,1000);//设置面板大小
+        JLabel jLabelBg = new JLabel(bgIcon);
+        jLabelBg.setBounds(0,0,767,677);
 
         JButton onePlayerButton = new JButton();//单人玩家按钮
         onePlayerButton.setIcon(new ImageIcon("image/bg/rect1.png"));
@@ -81,7 +66,6 @@ public class GameBeginJPanel extends ShowObj implements ActionListener{
         onePlayerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 onePlay=true;
                 GameBeginJPanel.this.actionPerformed(e);
             }
@@ -92,22 +76,9 @@ public class GameBeginJPanel extends ShowObj implements ActionListener{
         twoPlayerButton.setBounds(520, 350, 180, 60);
         twoPlayerButton.addActionListener(this);
 
-        /*
-        JButton magicBoxButton = new JButton();
-        magicBoxButton.setIcon(new ImageIcon("image/bg/rect3.png"));
-        magicBoxButton.setBounds(520, 450, 180, 60);
-        */
-
-        /**
-         * 注入
-         */
-        //this.add(magicBoxButton);
         this.add(onePlayerButton);
         this.add(twoPlayerButton);
-        this.add(jLabel1);
-        this.add(jLabel2);
-        this.add(ap);
-        this.add(jLabel3);
+        this.add(jLabelBg);
 
         this.setVisible(true);
         this.setOpaque(true);

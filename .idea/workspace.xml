@@ -6,8 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="a94a4065-777d-4f9c-852d-9af4307b9acd" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaoPaoTang/com/pop/show/GameMainJPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaoPaoTang/com/pop/show/GameMainJPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/pop/show/GameMainJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pop/show/GameMainJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/mapobj/Breakable1.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/mapobj/Breakable1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/mapobj/Breakable2.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/mapobj/Breakable2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/mapobj/Breakable3.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/mapobj/Breakable3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/mapobj/Breakable4.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/mapobj/Breakable4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/mapobj/Breakable5.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/mapobj/Breakable5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/mapobj/Breakable6.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/mapobj/Breakable6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/mapobj/UnBreakable1.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/mapobj/UnBreakable1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/mapobj/UnBreakable2.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/mapobj/UnBreakable2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/mapobj/UnBreakable3.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/mapobj/UnBreakable3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/mapobj/UnBreakable4.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/mapobj/UnBreakable4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/mapobj/UnBreakable5.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/mapobj/UnBreakable5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/mapobj/UnBreakable6.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/mapobj/UnBreakable6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaoPaoTang/com/pop/text/3.map" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaoPaoTang/com/pop/text/3.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/Breakable1.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/Breakable1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/Breakable2.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/Breakable2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/Breakable3.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/Breakable3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/Breakable4.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/Breakable4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/Breakable5.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/Breakable5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/Breakable6.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/Breakable6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/UnBreakable1.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/UnBreakable1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/UnBreakable2.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/UnBreakable2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/UnBreakable3.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/UnBreakable3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/UnBreakable4.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/UnBreakable4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/UnBreakable5.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/UnBreakable5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/UnBreakable6.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaoPaoTang/mapobj/UnBreakable6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pop/text/3.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pop/text/3.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752423234549</updated>
-      <workItem from="1752423235670" duration="7294000" />
+      <workItem from="1752423235670" duration="10023000" />
     </task>
     <servers />
   </component>

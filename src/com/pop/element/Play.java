@@ -323,7 +323,7 @@ public class Play extends ElementObj {
 		int dy=(getY()+getH())/ MapManager.dxdy;//对于高度，直接加上玩家高度即可
 		if (this.leftBoolean) {
 			try {
-				if (MapManager.mapList[dy][dx-1]==null||!(MapManager.mapList[dy][dx] instanceof Bomb)){//如果要走的格子前面是炸弹就不走
+				if (dx > 0 && (MapManager.mapList[dy][dx-1]==null||!(MapManager.mapList[dy][dx] instanceof Bomb))){//加边界判断
 					this.setX(this.getX() - v);
 				}
 			}catch (Exception e){
@@ -332,7 +332,7 @@ public class Play extends ElementObj {
 		}
 		if (this.upBoolean) {
 			try {
-				if (MapManager.mapList[dy-1][dx]==null||!(MapManager.mapList[dy][dx] instanceof Bomb)){//如果要走的格子前面是空并且没有炸弹就走
+				if (dy > 0 && (MapManager.mapList[dy-1][dx]==null||!(MapManager.mapList[dy][dx] instanceof Bomb))){//加边界判断
 					this.setY(this.getY() - v);
 				}
 			}catch (Exception e){
@@ -341,7 +341,7 @@ public class Play extends ElementObj {
 		}
 		if (this.rightBoolean ) {//这里的边界直接使用常量获取
 			try {
-				if (MapManager.mapList[dy][dx+1]==null||!(MapManager.mapList[dy][dx] instanceof Bomb)){//如果要走的格子前面为空并且不是炸弹就走
+				if (dx+1 < MapManager.mapList[0].length && (MapManager.mapList[dy][dx+1]==null||!(MapManager.mapList[dy][dx] instanceof Bomb))){//加边界判断
 					this.setX(this.getX() + v);
 				}
 			}catch (Exception e){
@@ -350,7 +350,7 @@ public class Play extends ElementObj {
 		}
 		if (this.downBoolean) {
 			try {
-				if (MapManager.mapList[dy+1][dx]==null||!(MapManager.mapList[dy][dx] instanceof Bomb)) {//如果要走的格子前面是炸弹就不走
+				if (dy+1 < MapManager.mapList.length && (MapManager.mapList[dy+1][dx]==null||!(MapManager.mapList[dy][dx] instanceof Bomb))) {//加边界判断
 					this.setY(this.getY() + v);
 				}
 			}catch (Exception e){

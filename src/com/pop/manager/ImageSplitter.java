@@ -16,14 +16,37 @@ public class ImageSplitter {
             int width = originalImage.getWidth() / 4;
             int height = originalImage.getHeight() / 4;
             
+            int[] cropParams = {
+            		//down方向
+            		25, 42, width-50, height-42,
+            		//left方向
+            		25, 42, width-50, height-42,
+            		//right方向
+            		25, 42, width-50, height-42,
+            		//up方向
+            		25, 42, width-50, height-42,
+            };
+            
             // 分割图片
             for (int row = 0; row < 4; row++) {
                 for (int col = 0; col < 4; col++) {
+                	// 获取当前方向的裁剪参数
+                    int baseIndex = row * 4;
+                    int cropX = cropParams[baseIndex];
+                    int cropY = cropParams[baseIndex+1];
+                    int cropWidth = cropParams[baseIndex+2];
+                    int cropHeight = cropParams[baseIndex+3];
+                    
+                    // 计算原始子图位置
+                    int srcX = col * width;
+                    int srcY = row * height;
+                    
+                    //创建裁剪后的子图
                     BufferedImage subImage = originalImage.getSubimage(
-                        col * width, 
-                        row * height, 
-                        width, 
-                        height
+                		srcX + cropX, 
+                        srcY + cropY, 
+                        cropWidth, 
+                        cropHeight
                     );
                     
                     // 保存分割后的小图片

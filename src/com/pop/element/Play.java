@@ -58,8 +58,8 @@ public class Play extends ElementObj {
 		this.setY(y);
 		this.setPlayNumber(playNumber);
 		this.setIcon(icon);
-		this.sethHit(20);
-		this.setwHit(20);
+		this.sethHit(35);
+		this.setwHit(35);
 		this.beginx=x;
 		this.beginy=y;
 	}
@@ -300,12 +300,12 @@ public class Play extends ElementObj {
 			case "left":
 				iconkey=iconkey+"left"+ imageIndex;
 				setW(51);
-				setH(76);
+				setH(80);
 				break;
 			case "right":
 				iconkey=iconkey+"right"+ imageIndex;
 				setW(51);
-				setH(76);
+				setH(80);
 				break;
 			default:
 				break;
@@ -440,7 +440,7 @@ public class Play extends ElementObj {
 
 	@Override
 	public Rectangle getRectangle() {//特殊处理,这里的xy需要设成和炸弹类似的xy
-		Rectangle myRectangle=new Rectangle(getX()+25,getY()+64,gethHit(),getwHit());
+		Rectangle myRectangle=new Rectangle(getX()+10,getY()+55,getwHit(),gethHit());
 		return myRectangle;
 	}
 

@@ -31,6 +31,7 @@ public class GameMainJPanel extends ShowObj{
 	public static int h=677;
 	int Level;
 	boolean onePlay;
+	private Rectangle pauseRect = new Rectangle(30, 55+120*5+30, 136, 42);
 	public GameMainJPanel(boolean onePlay) {
 		init(onePlay);
 	}
@@ -54,6 +55,16 @@ public class GameMainJPanel extends ShowObj{
 		}
 		em = ElementManager.getManager();//得到元素管理器对象
 
+		// 移除JButton相关代码，添加鼠标监听
+		this.addMouseListener(new java.awt.event.MouseAdapter() {
+			@Override
+			public void mousePressed(java.awt.event.MouseEvent e) {
+				if (pauseRect.contains(e.getPoint())) {
+					GameJFrame.getGameJFrame().remove(GameMainJPanel.this);
+					GameJFrame.getGameJFrame().setjPanel(new GameBeginJPanel());
+				}
+			}
+		});
 	}
 	
 	@Override  //用于绘画的    Graphics 画笔 专门用于绘画的，在此处将每次监听器层的反应反馈到这里，

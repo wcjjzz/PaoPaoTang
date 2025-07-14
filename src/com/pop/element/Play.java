@@ -36,7 +36,7 @@ public class Play extends ElementObj {
 	}
 
 	//面对方向和imageIndex一起组成了最终的icon图片显示
-	protected String fxString = "up";
+	protected String fxString = "down";
 	int imageIndex =1;
 	int deadIndex  =1;//死亡动画
 

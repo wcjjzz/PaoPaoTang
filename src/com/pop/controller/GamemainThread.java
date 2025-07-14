@@ -69,14 +69,14 @@ public class GamemainThread extends Thread {
 //		图片导入
 //四个角标：40, 20   670, 530   40,530  670, 20
 		if (onePlay){
-			ImageIcon icon1 = GameLoad.imgMap.get("new1down1");
-			Play obj1 = new Play(40, 20,"new1", icon1);// 实例化玩家1
+			ImageIcon icon1 = GameLoad.imgMap.get("1down1");
+			Play obj1 = new Play(40, 20,"1", icon1);// 实例化玩家1
 			em.addElement(obj1, GameElement.PLAY);
 			loadEnemy(3);
 		}else{
-			ImageIcon icon1 = GameLoad.imgMap.get("new1down1");
+			ImageIcon icon1 = GameLoad.imgMap.get("1down1");
 			ImageIcon icon2 = GameLoad.imgMap.get("2down1");
-			Play obj1 = new Play(40, 20,"new1", icon1);// 实例化玩家1
+			Play obj1 = new Play(40, 20,"1", icon1);// 实例化玩家1
 			Play obj2 = new Play(670, 530,"2", icon2);// 实例化玩家2
 			// 直接添加
 			em.addElement(obj2, GameElement.PLAY);
@@ -91,21 +91,21 @@ public class GamemainThread extends Thread {
 			ImageIcon icon1 = GameLoad.imgMap.get("2down1");
 			ImageIcon icon2 = GameLoad.imgMap.get("3down1");
 			ImageIcon icon3 = GameLoad.imgMap.get("4down1");
-			Enemy Enemy1 = new Enemy(40, 530,"2", icon1);// 实例化敌人2
-			Enemy Enemy2 = new Enemy(670, 20,"3", icon2);// 实例化敌人3
-			Enemy Enemy3 = new Enemy(670, 530,"4", icon2);// 实例化敌人4
+			Enemy Enemy1 = new Enemy(670, 530,"2", icon1);// 实例化敌人2
+//			Enemy Enemy2 = new Enemy(670, 20,"3", icon2);// 实例化敌人3
+//			Enemy Enemy3 = new Enemy(670, 530,"4", icon2);// 实例化敌人4
 			// 直接添加
-			em.addElement(Enemy2, GameElement.ENEMY);
+//			em.addElement(Enemy2, GameElement.ENEMY);
 			em.addElement(Enemy1, GameElement.ENEMY);
-			em.addElement(Enemy3, GameElement.ENEMY);
+//			em.addElement(Enemy3, GameElement.ENEMY);
 		}else{
-			ImageIcon icon1 = GameLoad.imgMap.get("3down1");
-			ImageIcon icon2 = GameLoad.imgMap.get("4down1");
-			Enemy Enemy1 = new Enemy(40, 530,"3", icon1);// 实例化敌人3
-			Enemy Enemy2 = new Enemy(670, 20,"4", icon2);// 实例化敌人4
-			// 直接添加
-			em.addElement(Enemy2, GameElement.ENEMY);
-			em.addElement(Enemy1, GameElement.ENEMY);
+//			ImageIcon icon1 = GameLoad.imgMap.get("3down1");
+//			ImageIcon icon2 = GameLoad.imgMap.get("4down1");
+//			Enemy Enemy1 = new Enemy(40, 530,"3", icon1);// 实例化敌人3
+//			Enemy Enemy2 = new Enemy(670, 20,"4", icon2);// 实例化敌人4
+//			// 直接添加
+//			em.addElement(Enemy2, GameElement.ENEMY);
+//			em.addElement(Enemy1, GameElement.ENEMY);
 		}
 	}
 

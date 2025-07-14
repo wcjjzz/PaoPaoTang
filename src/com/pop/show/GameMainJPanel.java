@@ -114,17 +114,17 @@ public class GameMainJPanel extends ShowObj{
 		ImageIcon play2  = new ImageIcon("image/bg/2.png");//Íæ¼Ò×´Ì¬ÏÔÊ¾
 		g.drawImage(play2.getImage(), 30,55+120,140,105, null);
 
-		ImageIcon play3  = new ImageIcon("image/bg/3.png");//Íæ¼Ò×´Ì¬ÏÔÊ¾
-		g.drawImage(play3.getImage(), 30,55+120*2,140,105, null);
-
-		ImageIcon play4  = new ImageIcon("image/bg/4.png");//Íæ¼Ò×´Ì¬ÏÔÊ¾
-		g.drawImage(play4.getImage(), 30,55+120*3,140,105, null);
-
-		ImageIcon level  = new ImageIcon("image/bg/level.png");//level×´Ì¬ÏÔÊ¾
-		g.drawImage(level.getImage(), 55,55+120*4-5,99,34, null);
-
-		ImageIcon kuang1  = new ImageIcon("image/bg/kuang.png");//level¿ò×´Ì¬ÏÔÊ¾
-		g.drawImage(kuang1.getImage(), 30,55+120*4+30,140,34, null);
+//		ImageIcon play3  = new ImageIcon("image/bg/3.png");//Íæ¼Ò×´Ì¬ÏÔÊ¾
+//		g.drawImage(play3.getImage(), 30,55+120*2,140,105, null);
+//
+//		ImageIcon play4  = new ImageIcon("image/bg/4.png");//Íæ¼Ò×´Ì¬ÏÔÊ¾
+//		g.drawImage(play4.getImage(), 30,55+120*3,140,105, null);
+//
+//		ImageIcon level  = new ImageIcon("image/bg/level.png");//level×´Ì¬ÏÔÊ¾
+//		g.drawImage(level.getImage(), 55,55+120*4-5,99,34, null);
+//
+//		ImageIcon kuang1  = new ImageIcon("image/bg/kuang.png");//level¿ò×´Ì¬ÏÔÊ¾
+//		g.drawImage(kuang1.getImage(), 30,55+120*4+30,140,34, null);
 
 		ImageIcon time  = new ImageIcon("image/bg/time.png");//time×´Ì¬ÏÔÊ¾
 		g.drawImage(time.getImage(), 55,55+120*5-55,99,34, null);
@@ -151,7 +151,7 @@ public class GameMainJPanel extends ShowObj{
 		else
 			s = Integer.toString(second);
 		g.drawString(m + ":" + s,65,55+120*5+6);
-		g.drawString("1 / 5",70,55+120*4+55);
+//		g.drawString("1 / 5",70,55+120*4+55);
 
 //		g.setFont(new Font("Times New Roman", Font.BOLD, 20));
 //		g.setColor(new Color(51,98,55));//ÂÌ

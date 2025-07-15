@@ -131,6 +131,23 @@ public class GamemainThread extends Thread {
 		while (true) {// true可变为关卡判断
 			//下面将会循环人物和敌人
 			Map<GameElement, List<ElementObj>> all = em.getGameElements();
+			
+			//使用了二维数组形式的地图，因此在这里显示需要使用二维数组循环处理
+			for (int dy = 0; dy < 15; dy++) { // 迭代器
+				for (int dx = 0; dx < 17; dx++) {
+					if(MapManager.mapList[dy][dx]==null) {//判断空值
+						continue;
+					}
+					if (!MapManager.mapList[dy][dx].getislive()) {
+						MapManager.mapList[dy][dx].die();//在这里使用,不放入model中，节约重复判断
+						//注意die方法有时会生成一个新元素在原地，因此需要需要将置空操作交给类自身决定
+						continue;
+					}
+					MapManager.mapList[dy][dx].model();// 调用每个类的model
+				}
+			}
+			
+			
 
 			for (GameElement ge : GameElement.values()) { // 迭代器
 				List<ElementObj> list = all.get(ge);
@@ -172,20 +189,7 @@ public class GamemainThread extends Thread {
 				break;
 			}
 
-			//使用了二维数组形式的地图，因此在这里显示需要使用二维数组循环处理
-			for (int dy = 0; dy < 15; dy++) { // 迭代器
-				for (int dx = 0; dx < 17; dx++) {
-					if(MapManager.mapList[dy][dx]==null) {//判断空值
-						continue;
-					}
-					if (!MapManager.mapList[dy][dx].getislive()) {
-						MapManager.mapList[dy][dx].die();//在这里使用,不放入model中，节约重复判断
-						//注意die方法有时会生成一个新元素在原地，因此需要需要将置空操作交给类自身决定
-						continue;
-					}
-					MapManager.mapList[dy][dx].model();// 调用每个类的model
-				}
-			}
+
 
 
 			List<ElementObj> Plays = all.get(GameElement.PLAY);
@@ -260,9 +264,12 @@ public class GamemainThread extends Thread {
 		for (int i = 0; i < A.size(); i++) {//此循环循环play列表
 			Play C = ((Play) A.get(i));//获取玩家类
 			if (C.pk(B)) {//如果碰撞了道具
-				B.get(C);//改变人物属性
-				//获得完成之后，需要调用死亡方法
-				B.die();
+				if(B.getTypes()!=6) {
+					B.get(C);//改变人物属性
+					//获得完成之后，需要调用死亡方法
+					if(B.getTypes()!=5)
+						B.die();
+				}
 			}
 		}
 	}

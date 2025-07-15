@@ -146,9 +146,9 @@ public class Mapobj extends ElementObj{
 	@Override
 	public void die(){//建筑死亡
 		//此处需要生成道具
-		int max=15,min=1;//一半概率有道具
+		int max=20,min=1;//一半概率有道具
 		int ran2 = (int) (Math.random()*(max-min)+min);
-		if (ran2<9){//炸出来了
+		if (ran2<11){//炸出来了
 			PropEffect prop=null;
 			if (ran2==1){//爱心
 				prop= (PropEffect) new PropEffect().build(getX(),getY(),4);
@@ -158,6 +158,8 @@ public class Mapobj extends ElementObj{
 				prop= (PropEffect) new PropEffect().build(getX(),getY(),1);
 			}else if (ran2<9) {//6,7,8炸弹个数
 				prop= (PropEffect) new PropEffect().build(getX(),getY(),3);
+			}else if (ran2<11) {//9,10水雷
+				prop= (PropEffect) new PropEffect().build(getX(),getY(),5);
 			}
 			MapManager.mapList[getY()][getX()]=prop;
 		}else{//屁都没有

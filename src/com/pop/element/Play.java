@@ -30,7 +30,12 @@ public class Play extends ElementObj {
 	boolean fireNow = false;//开火状态
 
 	boolean dieAndLive= true;//可能死亡状态，用于播放死亡动画，true活flase死
+	
+	boolean isBubbleWarp = false;//用于判断执行泡泡包围的状态
+	
 
+    
+    
 	public String getFxString() {
 		return fxString;
 	}
@@ -115,18 +120,31 @@ public class Play extends ElementObj {
 		}
 	}
 	public int getV() { return v; }
+	
+	public boolean isBubbleWarp() {
+		return isBubbleWarp;
+	}
+
+	public void setBubbleWarp(boolean bubbleWarp) {
+		isBubbleWarp = bubbleWarp;
+	}
+	
+	
 	//以下将是类内主要的逻辑函数
 	/*
 	 * model()整个类运行的主要函数，游戏内play类将会依照这个主函数执行整个顺序
 	 * */
 	@Override
 	public void model() {
-		// TODO Auto-generated method stub
-		updateImage();
-		move();
-		behavior();
+		if(isBubbleWarp == false) {
+			updateImage();
+			move();
+			behavior();
+		}
 	}
 
+
+	
 	/*
 	* 绘画方法
 	* */
@@ -444,5 +462,13 @@ public class Play extends ElementObj {
 		return myRectangle;
 	}
 
+	//玩家吃了水雷道具，即道具5所改变状态的函数
+	public void BubbleWrap(int x,int y) {
+		isBubbleWarp = true;
+		
+		PropEffect prop = (PropEffect) new PropEffect().build(x,y,6,this);
+		MapManager.mapList[y][x]=prop;
+	
+	}
 
 }

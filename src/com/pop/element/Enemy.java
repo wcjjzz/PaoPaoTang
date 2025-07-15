@@ -25,6 +25,9 @@ public class Enemy extends Play {
 	// 路径跟随相关变量
 	private List<int[]> safePath = new ArrayList<>(); // 当前要走的安全路径
 	private int pathStep = 0; // 当前走到路径的第几步
+	
+	// 新增：放炸弹后标记
+	private boolean justFired = false;
 
 	public Enemy(int x, int y, String playNumber, ImageIcon icon) {
 		super(x, y, playNumber, icon);
@@ -109,6 +112,7 @@ public class Enemy extends Play {
 		// 有一定概率放炸弹
 		if (random.nextDouble() < 0.2) { // 20%概率
 			this.fireNow = true;
+			justFired = true; // 新增：放炸弹后标记
 		}
 	}
 
@@ -207,6 +211,10 @@ public class Enemy extends Play {
 			needFindPath = true;
 		} else if (safePath == null || pathStep >= safePath.size()) {
 			needFindPath = true;
+		}
+		if (justFired) { // 新增：刚放过炸弹，强制寻路
+			needFindPath = true;
+			justFired = false; // 重置标志
 		}
 		if (needFindPath) {
 			safePath = findSafePath(dy, dx, dangerZone);

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a94a4065-777d-4f9c-852d-9af4307b9acd" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/pop/element/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pop/element/Enemy.java" afterDir="false" />
-    </list>
+    <list default="true" id="a94a4065-777d-4f9c-852d-9af4307b9acd" name="更改" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1752423234549</updated>
       <workItem from="1752423235670" duration="10023000" />
-      <workItem from="1752548943918" duration="7947000" />
+      <workItem from="1752548943918" duration="8412000" />
     </task>
     <servers />
   </component>

@@ -203,6 +203,13 @@ public class Enemy extends Play {
 		// 1. 获取当前位置
 		int dx = (getX() + getW() / 2) / MapManager.dxdy;
 		int dy = (getY() + getH()) / MapManager.dxdy;
+		// 边界保护，防止越界
+		int rows = MapManager.mapList.length;
+		int cols = MapManager.mapList[0].length;
+		if (dx < 0) dx = 0;
+		if (dx >= cols) dx = cols - 1;
+		if (dy < 0) dy = 0;
+		if (dy >= rows) dy = rows - 1;
 		// 2. 获取危险区
 		boolean[][] dangerZone = getDangerZone();
 		// 3. 如果当前位置危险，或当前路径已走完，则重新寻路

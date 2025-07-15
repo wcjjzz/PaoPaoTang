@@ -114,11 +114,11 @@ public class GameMainJPanel extends ShowObj{
 		ImageIcon play2  = new ImageIcon("image/bg/2.png");//玩家状态显示
 		g.drawImage(play2.getImage(), 30,55+120,140,105, null);
 
-//		ImageIcon play3  = new ImageIcon("image/bg/3.png");//玩家状态显示
-//		g.drawImage(play3.getImage(), 30,55+120*2,140,105, null);
-//
-//		ImageIcon play4  = new ImageIcon("image/bg/4.png");//玩家状态显示
-//		g.drawImage(play4.getImage(), 30,55+120*3,140,105, null);
+		ImageIcon play3  = new ImageIcon("image/bg/3.png");//玩家状态显示
+		g.drawImage(play3.getImage(), 30,55+120*2,140,105, null);
+
+		ImageIcon play4  = new ImageIcon("image/bg/4.png");//玩家状态显示
+		g.drawImage(play4.getImage(), 30,55+120*3,140,105, null);
 //
 //		ImageIcon level  = new ImageIcon("image/bg/level.png");//level状态显示
 //		g.drawImage(level.getImage(), 55,55+120*4-5,99,34, null);

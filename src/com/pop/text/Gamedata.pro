@@ -1,45 +1,8 @@
-apple1=image/button/DefineSprite_396/1.png
-apple2=image/button/DefineSprite_396/2.png
-apple3=image/button/DefineSprite_396/3.png
-apple4=image/button/DefineSprite_396/4.png
-apple5=image/button/DefineSprite_396/5.png
-apple6=image/button/DefineSprite_396/6.png
-apple7=image/button/DefineSprite_396/7.png
-apple8=image/button/DefineSprite_396/8.png
-apple9=image/button/DefineSprite_396/9.png
-apple10=image/button/DefineSprite_396/10.png
-apple11=image/button/DefineSprite_396/11.png
-apple12=image/button/DefineSprite_396/12.png
-apple13=image/button/DefineSprite_396/13.png
-apple14=image/button/DefineSprite_396/14.png
-apple15=image/button/DefineSprite_396/15.png
-apple16=image/button/DefineSprite_396/16.png
-apple17=image/button/DefineSprite_396/17.png
-apple18=image/button/DefineSprite_396/18.png
-apple19=image/button/DefineSprite_396/19.png
-apple20=image/button/DefineSprite_396/20.png
-apple21=image/button/DefineSprite_396/21.png
-apple22=image/button/DefineSprite_396/22.png
-apple23=image/button/DefineSprite_396/23.png
-apple24=image/button/DefineSprite_396/24.png
-apple25=image/button/DefineSprite_396/25.png
-apple26=image/button/DefineSprite_396/26.png
-apple27=image/button/DefineSprite_396/27.png
-apple28=image/button/DefineSprite_396/28.png
-apple29=image/button/DefineSprite_396/29.png
-apple30=image/button/DefineSprite_396/30.png
-apple31=image/button/DefineSprite_396/31.png
-apple32=image/button/DefineSprite_396/32.png
-apple33=image/button/DefineSprite_396/33.png
-apple34=image/button/DefineSprite_396/34.png
-apple35=image/button/DefineSprite_396/35.png
-apple36=image/button/DefineSprite_396/36.png
-
 rect1=image/bg/rect1.png
 rect2=image/bg/rect2.png
 rect3=image/bg/rect3.png
 
-# ÐÂ½ÇÉ«Í¼Æ¬ÅäÖÃ
+# ½ÇÉ«Í¼Æ¬ÅäÖÃ
 1up1=image/Characters/newCharacers_1/newCharacter_up1.png
 1up2=image/Characters/newCharacers_1/newCharacter_up2.png
 1up3=image/Characters/newCharacers_1/newCharacter_up3.png
@@ -59,26 +22,6 @@ rect3=image/bg/rect3.png
 1right2=image/Characters/newCharacers_1/newCharacter_right2.png
 1right3=image/Characters/newCharacers_1/newCharacter_right3.png
 1right4=image/Characters/newCharacers_1/newCharacter_right4.png
-
-2up1=image/Characters/newCharacers_2/newCharacter_up1.png
-2up2=image/Characters/newCharacers_2/newCharacter_up2.png
-2up3=image/Characters/newCharacers_2/newCharacter_up3.png
-2up4=image/Characters/newCharacers_2/newCharacter_up4.png
-
-2down1=image/Characters/newCharacers_2/newCharacter_down1.png
-2down2=image/Characters/newCharacers_2/newCharacter_down2.png
-2down3=image/Characters/newCharacers_2/newCharacter_down3.png
-2down4=image/Characters/newCharacers_2/newCharacter_down4.png
-
-2left1=image/Characters/newCharacers_2/newCharacter_left1.png
-2left2=image/Characters/newCharacers_2/newCharacter_left2.png
-2left3=image/Characters/newCharacers_2/newCharacter_left3.png
-2left4=image/Characters/newCharacers_2/newCharacter_left4.png
-
-2right1=image/Characters/newCharacers_2/newCharacter_right1.png
-2right2=image/Characters/newCharacers_2/newCharacter_right2.png
-2right3=image/Characters/newCharacers_2/newCharacter_right3.png
-2right4=image/Characters/newCharacers_2/newCharacter_right4.png
 
 1dead1=image/p1/r0_Dead/1.png
 1dead2=image/p1/r0_Dead/2.png
@@ -120,6 +63,25 @@ rect3=image/bg/rect3.png
 1dead39=image/p1/r0_Dead/39.png
 1dead40=image/p1/r0_Dead/40.png
 
+2up1=image/Characters/newCharacers_2/newCharacter_up1.png
+2up2=image/Characters/newCharacers_2/newCharacter_up2.png
+2up3=image/Characters/newCharacers_2/newCharacter_up3.png
+2up4=image/Characters/newCharacers_2/newCharacter_up4.png
+
+2down1=image/Characters/newCharacers_2/newCharacter_down1.png
+2down2=image/Characters/newCharacers_2/newCharacter_down2.png
+2down3=image/Characters/newCharacers_2/newCharacter_down3.png
+2down4=image/Characters/newCharacers_2/newCharacter_down4.png
+
+2left1=image/Characters/newCharacers_2/newCharacter_left1.png
+2left2=image/Characters/newCharacers_2/newCharacter_left2.png
+2left3=image/Characters/newCharacers_2/newCharacter_left3.png
+2left4=image/Characters/newCharacers_2/newCharacter_left4.png
+
+2right1=image/Characters/newCharacers_2/newCharacter_right1.png
+2right2=image/Characters/newCharacers_2/newCharacter_right2.png
+2right3=image/Characters/newCharacers_2/newCharacter_right3.png
+2right4=image/Characters/newCharacers_2/newCharacter_right4.png
 
 2dead1=image/p2/r2_Dead/1.png
 2dead2=image/p2/r2_Dead/2.png
@@ -160,6 +122,7 @@ rect3=image/bg/rect3.png
 2dead38=image/p2/r2_Dead/38.png
 2dead39=image/p2/r2_Dead/39.png
 2dead40=image/p2/r2_Dead/40.png
+
 
 3up1=image/p3/r3_Up/1.png
 3up2=image/p3/r3_Up/2.png

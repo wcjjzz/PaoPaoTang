@@ -91,21 +91,19 @@ public class GamemainThread extends Thread {
 			ImageIcon icon1 = GameLoad.imgMap.get("2down1");
 			ImageIcon icon2 = GameLoad.imgMap.get("3down1");
 			ImageIcon icon3 = GameLoad.imgMap.get("4down1");
-			Enemy Enemy1 = new Enemy(670, 530,"2", icon1);// 实例化敌人2
-//			Enemy Enemy2 = new Enemy(670, 20,"3", icon2);// 实例化敌人3
-//			Enemy Enemy3 = new Enemy(670, 530,"4", icon2);// 实例化敌人4
-			// 直接添加
-//			em.addElement(Enemy2, GameElement.ENEMY);
+			Enemy Enemy1 = new Enemy(670, 530,"2", icon1);// 敌人2
+			Enemy Enemy2 = new Enemy(40, 530,"3", icon2);// 敌人3
+			Enemy Enemy3 = new Enemy(670, 20,"4", icon3);// 敌人4
 			em.addElement(Enemy1, GameElement.ENEMY);
-//			em.addElement(Enemy3, GameElement.ENEMY);
+			em.addElement(Enemy2, GameElement.ENEMY);
+			em.addElement(Enemy3, GameElement.ENEMY);
 		}else{
-//			ImageIcon icon1 = GameLoad.imgMap.get("3down1");
-//			ImageIcon icon2 = GameLoad.imgMap.get("4down1");
-//			Enemy Enemy1 = new Enemy(40, 530,"3", icon1);// 实例化敌人3
-//			Enemy Enemy2 = new Enemy(670, 20,"4", icon2);// 实例化敌人4
-//			// 直接添加
-//			em.addElement(Enemy2, GameElement.ENEMY);
-//			em.addElement(Enemy1, GameElement.ENEMY);
+			ImageIcon icon1 = GameLoad.imgMap.get("3down1");
+			ImageIcon icon2 = GameLoad.imgMap.get("4down1");
+			Enemy Enemy1 = new Enemy(40, 530,"3", icon1);// 敌人3
+			Enemy Enemy2 = new Enemy(670, 20,"4", icon2);// 敌人4
+			em.addElement(Enemy1, GameElement.ENEMY);
+			em.addElement(Enemy2, GameElement.ENEMY);
 		}
 	}
 
